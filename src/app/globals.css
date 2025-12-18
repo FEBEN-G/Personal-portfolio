@@ -14,7 +14,7 @@
 
 :root {
   /* Light Mode - White, Black & Brown Palette */
-  --background: #FFFFFF;
+  --background: #FEFEFE;
   --foreground: #111111;
   --surface: #F8F5F2;
   --primary: #5C4033; /* Deep Brown */
@@ -30,6 +30,10 @@
   --primary: #C49A6C;
   --secondary: #8A5A3C;
   --muted: #A89F97;
+}
+
+html {
+  font-size: 110%; /* Increase global scale */
 }
 
 body {
