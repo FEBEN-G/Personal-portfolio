@@ -95,20 +95,50 @@ export function Hero() {
 
         {/* Image Column - Hidden on mobile, visible on desktop */}
         <motion.div
-           initial={{ opacity: 0, x: 50 }}
-           animate={{ opacity: 1, x: 0 }}
-           transition={{ duration: 0.5 }}
-           className="hidden md:flex justify-center md:justify-end"
+           initial={{ opacity: 0, scale: 0.8 }}
+           animate={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
+           className="hidden md:flex justify-center md:justify-end relative"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 bg-surface/50">
+          {/* Unique Animated Background Motion */}
+          <motion.div
+            animate={{ 
+              rotate: 360,
+              scale: [1, 1.1, 1],
+            }}
+            transition={{ 
+              rotate: { repeat: Infinity, duration: 20, ease: "linear" },
+              scale: { repeat: Infinity, duration: 8, ease: "easeInOut" }
+            }}
+            className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20 rounded-full blur-3xl"
+          />
+          
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            className="relative z-10 w-80 h-80 lg:w-[450px] lg:h-[450px] rounded-2xl overflow-hidden border-2 border-primary/30 bg-surface/30 backdrop-blur-sm shadow-2xl"
+          >
              <Image
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Feben Getachew"
               fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              className="object-cover transition-all duration-700 hover:scale-105"
               priority
             />
-          </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+          </motion.div>
+
+          {/* Decorative floating elements */}
+          <motion.div 
+            animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            className="absolute -top-4 -right-4 w-12 h-12 border-2 border-primary/40 rounded-lg rotate-12" 
+          />
+          <motion.div 
+            animate={{ y: [0, -20, 0], x: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
+            className="absolute -bottom-8 -left-8 w-16 h-16 border border-secondary/30 rounded-full" 
+          />
         </motion.div>
       </div>
     </section>

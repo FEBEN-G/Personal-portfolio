@@ -13,11 +13,11 @@
 }
 
 :root {
-  /* Light Mode */
+  /* Light Mode - Original Coffee Palette */
   --background: #F1E6DA;
   --foreground: #2B1E16;
   --surface: #E3D3C2;
-  --primary: #8A5A3C; /* Accent */
+  --primary: #8A5A3C;
   --secondary: #8A5A3C;
   --muted: #8c7e72;
 }
