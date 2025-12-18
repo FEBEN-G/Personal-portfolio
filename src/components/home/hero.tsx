@@ -116,7 +116,7 @@ export function Hero() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="relative z-10 w-80 h-80 lg:w-[450px] lg:h-[450px] rounded-2xl overflow-hidden border-2 border-primary/30 bg-surface/30 backdrop-blur-sm shadow-2xl"
+            className="relative z-10 w-80 h-80 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-2 border-primary/30 bg-surface/30 backdrop-blur-sm shadow-2xl"
           >
              <Image
               src="/profile.png"
