@@ -3,7 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { Download, ArrowRight } from "lucide-react";
 import Link from "next/link"; 
 import Image from "next/image";
 
@@ -85,9 +85,9 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="https://docs.google.com/document/d/10Ao4m7x2IPCh99FazBdIHLYMbBQL7_E4WMNHNzqT_T8/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
-                View CV
-                <ExternalLink className="ml-2 w-4 h-4" />
+              <a href="/CV.pdf" download="Feben_Getachew_CV.pdf">
+                Download CV
+                <Download className="ml-2 w-4 h-4" />
               </a>
             </Button>
           </motion.div>
