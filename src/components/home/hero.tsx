@@ -119,7 +119,7 @@ export function Hero() {
             className="relative z-10 w-80 h-80 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-2 border-primary/30 bg-surface/30 backdrop-blur-sm shadow-2xl"
           >
              <Image
-              src="/profile.png"
+              src="/profile.jpg"
               alt="Feben Getachew"
               fill
               className="object-cover transition-all duration-700 hover:scale-105"
