@@ -29,6 +29,7 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-background text-foreground font-sans selection:bg-primary selection:text-white`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
